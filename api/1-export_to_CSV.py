@@ -41,7 +41,7 @@ def export_to_csv(USER_ID):
                             '\"{}\"'.format(USER_ID),
                             '\"{}\"'.format(USERNAME),
                             '\"{}\"'.format(TASK_COMPLETED_STATUS),
-                            '\"{}\"'.format(TASK_TITLE),
+                            '\"{}\"'.format(TASK_TITLE)
                         ]
                     )  # writing rows
         file.close()
