@@ -40,7 +40,7 @@ def export_to_csv(USER_ID):
                     file.write(
                         f'"{USER_ID}","{USERNAME}",\
 "{TASK_COMPLETED_STATUS}","{TASK_TITLE}"\n'
-                    )  # writing rows
+                    )  # write data to the csv file
         file.close()
 
 
