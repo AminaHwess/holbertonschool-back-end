@@ -34,7 +34,8 @@ def export_to_csv(USER_ID):
 
             for index in range(len(response_todos_json)):
                 if response_todos_json[index]["userId"] == USER_ID:
-                    TASK_COMPLETED_STATUS = response_todos_json[index]["completed"]
+                    rtjson = response_todos_json[index]
+                    TASK_COMPLETED_STATUS = rtjson["completed"]
                     TASK_TITLE = response_todos_json[index]["title"]
                     file.write(
                         f'"{USER_ID}","{USERNAME}",\
