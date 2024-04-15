@@ -3,14 +3,15 @@
 """
 extend Python script to export data in the CSV format
 """
-import csv
 import requests
 import sys
 
 
 def export_to_csv(USER_ID):
     base_url = "https://jsonplaceholder.typicode.com/"  # the API endpoint
-    response_users = requests.get(f"{base_url}/users")  # A GET request to the API
+    response_users = requests.get(
+        f"{base_url}/users"
+        )  # A GET request to the API
     response_users_json = response_users.json()  # JSON decoding
     listofids = []
     for index in range(len(response_users_json)):
@@ -35,7 +36,10 @@ def export_to_csv(USER_ID):
                 if response_todos_json[index]["userId"] == USER_ID:
                     TASK_COMPLETED_STATUS = response_todos_json[index]["completed"]
                     TASK_TITLE = response_todos_json[index]["title"]
-                    file.write(f'"{USER_ID}","{USERNAME}","{TASK_COMPLETED_STATUS}","{TASK_TITLE}"\n')  # writing rows
+                    file.write(
+                        f'"{USER_ID}","{USERNAME}",\
+"{TASK_COMPLETED_STATUS}","{TASK_TITLE}"\n'
+                    )  # writing rows
         file.close()
 
 
