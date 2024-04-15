@@ -20,13 +20,10 @@ for index in range(len(response_users_json)):
 
 USER_ID = int(sys.argv[1])  # the first parameter (user id)
 if USER_ID in listofids:
-    TOTAL_NUMBER_OF_TASKS = 0  # total number of tasks initialization
-    NUMBER_OF_DONE_TASKS = 0  # number of done tasks initialization
     response_todos = requests.get(f"{base_url}/todos")
     response_todos_json = response_todos.json()
     for index in range(len(response_users_json)):
         if response_users_json[index]["id"] == USER_ID:
-            EMPLOYEE_NAME = response_users_json[index]["name"]
             USERNAME = response_users_json[index]["username"]
             # fetching employee names and usernames
 
