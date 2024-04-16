@@ -37,7 +37,7 @@ def export_to_json(USER_ID):
                 TASK_TITLE = response_todos_json[index]["title"]
                 valuedict = {
                     "task": f"{TASK_TITLE}",
-                    "completed": bool(f"{TASK_COMPLETED_STATUS}"),
+                    "completed": TASK_COMPLETED_STATUS,
                     "username": f"{USERNAME}"
                 }
                 valuelist.append(valuedict.copy())
