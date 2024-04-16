@@ -41,7 +41,7 @@ def export_to_json(USER_ID):
                     "username": f"{USERNAME}",
                 }
                 valuelist.append(valuedict.copy())
-        datadict[f"{USER_ID}: "] = valuelist
+        datadict[f"{USER_ID}"] = valuelist
 
         with open(f"{USER_ID}.json", "w") as file:
             json.dump(datadict, file)
