@@ -38,7 +38,7 @@ def export_to_json(USER_ID):
                 valuedict = {
                     "task": f"{TASK_TITLE}",
                     "completed": f"{TASK_COMPLETED_STATUS}",
-                    "username": f"{USERNAME}",
+                    "username": f"{USERNAME}"
                 }
                 valuelist.append(valuedict.copy())
         datadict[f"{USER_ID}"] = valuelist
